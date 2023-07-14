@@ -21,7 +21,7 @@
             "dest": "/"
         },
         {
-            "src": "/detail/*",
+            "src": "/detail/:id",
             "dest": "/"
         },
         {
