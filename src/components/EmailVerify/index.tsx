@@ -10,7 +10,7 @@ const EmailVerify = () => {
   useEffect(() => {
     const verifyEmailUrl = async () => {
       try {
-        const url = `http://localhost:8000/verify/${param.id}`;
+        const url = `https://datn-8e48.onrender.com/verify/${param.id}`;
         const { data } = await axios.get(url);
         setValidUrl(true);
       } catch (error) {
