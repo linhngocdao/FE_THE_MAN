@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://datn-8e48.onrender.com",
+  baseURL: "http://localhost:8000",
   headers: {
     "Content-Type": "application/json",
   },
@@ -26,9 +26,7 @@ instance.interceptors.request.use(
     const { token } = JSON.parse(localStorage.getItem("user") ?? "{}");
 
     if (token) {
-      config.headers = {
-        Authorization: `Bearer ${token}`,
-      };
+      config.headers.Authorization = `Bearer ${token}`;
     }
 
     // Do something before request is sent
